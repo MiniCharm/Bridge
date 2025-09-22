@@ -31,6 +31,13 @@
             </summary>
             <returns>Returns the string Car</returns>
         </member>
+        <member name="M:Bridge.Car.PriceWithBrobisDiscount(System.Double)">
+            <summary>
+            A method that returns the price with 10% discount
+            </summary>
+            <param name="price"> A double price</param>
+            <returns>The price, with 10% subtracted</returns>
+        </member>
         <member name="P:Bridge.MC.Licenseplate">
             <summary>
             Property that contains the Licensplate as a string
@@ -58,6 +65,13 @@
             </summary>
             <returns>Returns the string MC</returns>
         </member>
+        <member name="M:Bridge.MC.PriceWithBrobisDiscount(System.Double)">
+            <summary>
+            A method that returns the price with 10% discount
+            </summary>
+            <param name="price"> A double price</param>
+            <returns>The price, with 10% subtracted</returns>
+        </member>
         <member name="P:Bridge.Vehicle.Licenseplate">
             <summary>
             Property that contains the Licensplate as a string
@@ -76,9 +90,15 @@
         <member name="M:Bridge.Vehicle.Price">
             <summary>
             A method that returns a fixed price.
-            If the vehicle has brobizz, there will be subtracketd 10%
             </summary>
             <returns> The value in double</returns>
+        </member>
+        <member name="M:Bridge.Vehicle.PriceWithBrobisDiscount(System.Double)">
+            <summary>
+            A method that returns the price with 10% discount
+            </summary>
+            <param name="price"> A double price</param>
+            <returns>The price, with 10% subtracted</returns>
         </member>
         <member name="M:Bridge.Vehicle.VehicleType">
             <summary>

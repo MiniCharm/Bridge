@@ -18,10 +18,10 @@ namespace TestBridge
         public void TestPriceMcWithBrobiz()
         {
             //Arrange
-            Vehicle c = new MC("8888888", DateTime.Now, true);
+            Vehicle mc = new MC("8888888", DateTime.Now, true);
 
             //Act
-            double result = c.PriceWithBrobisDiscount();
+            double result = mc.PriceWithBrobisDiscount(mc.Price());
 
             //Assert
             Assert.AreEqual(result, 108);

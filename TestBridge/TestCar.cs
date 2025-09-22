@@ -34,7 +34,7 @@ namespace TestBridge
             Vehicle c = new Car("8888888", DateTime.Now, true);
 
             //Act
-            double result = c.PriceWithBrobisDiscount();
+            double result = c.PriceWithBrobisDiscount(c.Price());
 
             //Assert
             Assert.AreEqual(result, 207);

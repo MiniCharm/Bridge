@@ -67,9 +67,13 @@ namespace Bridge
             return "MC";
         }
 
-        public override double PriceWithBrobisDiscount()
+        /// <summary>
+        /// A method that returns the price with 10% discount
+        /// </summary>
+        /// <param name="price"> A double price</param>
+        /// <returns>The price, with 10% subtracted</returns>
+        public override double PriceWithBrobisDiscount(double price)
         {
-            double price = Price();
             if (Brobiz == true)
             {
                 price -= 10 * (price / 100);

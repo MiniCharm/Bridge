@@ -32,10 +32,11 @@ namespace Bridge
         public abstract double Price();
 
         /// <summary>
-        /// 
+        /// A method that returns the price with 10% discount
         /// </summary>
-        /// <returns></returns>
-        public abstract double PriceWithBrobisDiscount();
+        /// <param name="price"> A double price</param>
+        /// <returns>The price, with 10% subtracted</returns>
+        public abstract double PriceWithBrobisDiscount(double price);
         /// <summary>
         /// A method that returns the type of vechile
         /// </summary>
