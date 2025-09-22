@@ -9,7 +9,7 @@ namespace TestBridge
         public void TestPriceMC()
         {
             //Arrange
-            MC mc = new MC();
+            Vehicle mc = new MC();
 
             //Act
             double result = mc.Price();
@@ -22,7 +22,7 @@ namespace TestBridge
         public void TestVehicleTypeMC()
         {
             //Arrange
-            MC mc = new MC();
+            Vehicle mc = new MC();
 
             //Act
             string result = mc.VehicleType();

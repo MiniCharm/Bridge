@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class Car: Vehicle
+    public class Vehicle
     {
         /// <summary>
         /// Property that contains the Licensplate as a string
@@ -14,25 +14,25 @@ namespace Bridge
         public string Licenseplate { get; set; }
 
         /// <summary>
-        /// Property that contains the date the car passed as DateTime
+        /// Property that contains the date the vehicle passed as DateTime
         /// </summary>
         public DateTime Date { get; set; }
 
         /// <summary>
         /// A method that returns a fixed price
         /// </summary>
-        /// <returns>the double 230</returns>
-        public override double Price() 
+        /// <returns> The value in double</returns>
+        public virtual double Price()
         {
-            return 230;
+            return 0;
         }
         /// <summary>
         /// A method that returns the type of vechile
         /// </summary>
-        /// <returns>Returns the string Car</returns>
-        public override string VehicleType() 
+        /// <returns>Returns a string </returns>
+        public virtual string VehicleType()
         {
-            return "Car";
+            return "Vehicle";
         }
     }
 }

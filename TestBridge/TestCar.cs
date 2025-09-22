@@ -6,10 +6,10 @@ namespace TestBridge
     public sealed class TestCar
     {
         [TestMethod]
-        public void TestPrice()
+        public void TestPriceCar()
         {
             //Arrange
-            Car c = new Car();
+            Vehicle c = new Car();
 
             //Act
             double result = c.Price();
@@ -19,10 +19,10 @@ namespace TestBridge
         }
 
         [TestMethod]
-        public void TestVehicleType()
+        public void TestVehicleTypeCar()
         {
             //Arrange
-            Car c = new Car();
+            Vehicle c = new Car();
 
             //Act
             string result = c.VehicleType();

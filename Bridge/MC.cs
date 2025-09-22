@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class MC
+    public class MC : Vehicle
     {
         /// <summary>
         /// Property that contains the Licensplate as a string
@@ -23,7 +23,7 @@ namespace Bridge
         /// A method that returns a fixed price
         /// </summary>
         /// <returns>the double 120</returns>
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
@@ -31,7 +31,7 @@ namespace Bridge
         /// A method that returns the type of vechile
         /// </summary>
         /// <returns>Returns the string MC</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }
