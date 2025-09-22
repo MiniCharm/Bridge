@@ -56,12 +56,7 @@ namespace Bridge
         /// <returns>the double 230</returns>
         public override double Price() 
         {
-            double price = 230;
-            if (Brobiz == true) 
-            {
-                price-=10*(price/100);
-            }
-            return price;
+            return 230;
         }
         /// <summary>
         /// A method that returns the type of vechile
@@ -70,6 +65,16 @@ namespace Bridge
         public override string VehicleType() 
         {
             return "Car";
+        }
+
+        public override double PriceWithBrobisDiscount()
+        {
+            double price = Price();
+            if (Brobiz == true)
+            {
+                price -= 10 * (price / 100);
+            }
+            return price;
         }
     }
 }

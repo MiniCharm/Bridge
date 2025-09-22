@@ -21,7 +21,7 @@ namespace TestBridge
             Vehicle c = new MC("8888888", DateTime.Now, true);
 
             //Act
-            double result = c.Price();
+            double result = c.PriceWithBrobisDiscount();
 
             //Assert
             Assert.AreEqual(result, 108);

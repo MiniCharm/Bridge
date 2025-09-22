@@ -27,11 +27,15 @@ namespace Bridge
 
         /// <summary>
         /// A method that returns a fixed price.
-        /// If the vehicle has brobizz, there will be subtracketd 10%
         /// </summary>
         /// <returns> The value in double</returns>
         public abstract double Price();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public abstract double PriceWithBrobisDiscount();
         /// <summary>
         /// A method that returns the type of vechile
         /// </summary>

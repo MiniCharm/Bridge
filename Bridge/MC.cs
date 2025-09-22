@@ -56,12 +56,7 @@ namespace Bridge
 
         public override double Price()
         {
-            double price = 120;
-            if (Brobiz == true)
-            {
-                price -= 10 * (price / 100);
-            }
-            return price;
+            return 120;
         }
         /// <summary>
         /// A method that returns the type of vechile
@@ -72,5 +67,14 @@ namespace Bridge
             return "MC";
         }
 
+        public override double PriceWithBrobisDiscount()
+        {
+            double price = Price();
+            if (Brobiz == true)
+            {
+                price -= 10 * (price / 100);
+            }
+            return price;
+        }
     }
 }
