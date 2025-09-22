@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="P:Bridge.Car.Licenseplate">
+            <summary>
+            Property that contains the Licensplate as a string
+            </summary>
+        </member>
+        <member name="P:Bridge.Car.Date">
+            <summary>
+            Property that contains the date the car passed as DateTime
+            </summary>
+        </member>
+        <member name="P:Bridge.Car.Brobiz">
+            <summary>
+            Propperty that uses a boolean to indicates if the car used Brobiz too pay.
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.Price">
+            <summary>
+            A method that returns a fixed price
+            </summary>
+            <returns>the double 230</returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            A method that returns the type of vechile
+            </summary>
+            <returns>Returns the string Car</returns>
+        </member>
+        <member name="P:Bridge.MC.Licenseplate">
+            <summary>
+            Property that contains the Licensplate as a string
+            </summary>
+        </member>
+        <member name="P:Bridge.MC.Date">
+            <summary>
+            Property that contains the date the Mc passed as DateTime
+            </summary>
+        </member>
+        <member name="P:Bridge.MC.Brobiz">
+            <summary>
+            Propperty that uses a boolean to indicates if the MC used Brobiz too pay.
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.Price">
+            <summary>
+            A method that returns a fixed price
+            </summary>
+            <returns>the double 120</returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            A method that returns the type of vechile
+            </summary>
+            <returns>Returns the string MC</returns>
+        </member>
+        <member name="P:Bridge.Vehicle.Licenseplate">
+            <summary>
+            Property that contains the Licensplate as a string
+            </summary>
+        </member>
+        <member name="P:Bridge.Vehicle.Brobiz">
+            <summary>
+            Propperty that uses a boolean to indicates if the vehicle used Brobiz too pay.
+            </summary>
+        </member>
+        <member name="P:Bridge.Vehicle.Date">
+            <summary>
+            Property that contains the date the vehicle passed as DateTime
+            </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.Price">
+            <summary>
+            A method that returns a fixed price.
+            If the vehicle has brobizz, there will be subtracketd 10%
+            </summary>
+            <returns> The value in double</returns>
+        </member>
+        <member name="M:Bridge.Vehicle.VehicleType">
+            <summary>
+            A method that returns the type of vechile
+            </summary>
+            <returns>Returns a string </returns>
+        </member>
+    </members>
+</doc>
