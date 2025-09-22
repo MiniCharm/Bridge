@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +9,29 @@ namespace Bridge
 {
     public class Vehicle
     {
+        private string _licenseplte;
         /// <summary>
         /// Property that contains the Licensplate as a string
         /// </summary>
-        public string Licenseplate { get; set; }
+        public string Licenseplate
+        {
+            get
+            {
+                return _licenseplte;
+            }
+            set
+            {
+                if (value.Length > 7)
+                {
+                    throw new ArgumentException("Licenseplate must be under 7 characters");
+                }
+                else
+                {
+                    _licenseplte = value;
+                }
+
+            }
+        }
 
         /// <summary>
         /// Property that contains the date the vehicle passed as DateTime

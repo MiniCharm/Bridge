@@ -6,10 +6,19 @@ namespace TestBridge
     public sealed class TestCar
     {
         [TestMethod]
+        public void TestInvalidLisenceplate() 
+        {
+            //Act
+            Action invalidLisenceplate = () => new Car("11111111111", DateTime.Now);
+            //Arrange
+            Assert.ThrowsException<ArgumentException>(invalidLisenceplate);
+        }
+
+        [TestMethod]
         public void TestPriceCar()
         {
             //Arrange
-            Vehicle c = new Car();
+            Vehicle c = new Car("7777777", DateTime.Now);
 
             //Act
             double result = c.Price();
@@ -22,7 +31,7 @@ namespace TestBridge
         public void TestVehicleTypeCar()
         {
             //Arrange
-            Vehicle c = new Car();
+            Vehicle c = new Car("7777777", DateTime.Now);
 
             //Act
             string result = c.VehicleType();
