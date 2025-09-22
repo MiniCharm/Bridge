@@ -12,7 +12,7 @@ namespace Bridge
         /// <summary>
         /// Property that contains the Licensplate as a string
         /// </summary>
-        public string Licenseplate
+        public override string Licenseplate
         {
 
             get
@@ -36,12 +36,18 @@ namespace Bridge
         /// <summary>
         /// Property that contains the date the car passed as DateTime
         /// </summary>
-        public DateTime Date { get; set; }
+        public override DateTime Date { get; set; }
 
-        public Car( string licenselate, DateTime date) 
+        /// <summary>
+        /// Propperty that uses a boolean to indicates if the car used Brobiz too pay.
+        /// </summary>
+        public override bool Brobiz { get; set; }
+
+        public Car( string licenselate, DateTime date, bool brobiz) 
         {
             Licenseplate = licenselate;
             Date = date;
+            Brobiz = brobiz;
         }
 
         /// <summary>
@@ -50,7 +56,12 @@ namespace Bridge
         /// <returns>the double 230</returns>
         public override double Price() 
         {
-            return 230;
+            double price = 230;
+            if (Brobiz == true) 
+            {
+                price-=10*(price/100);
+            }
+            return price;
         }
         /// <summary>
         /// A method that returns the type of vechile

@@ -7,52 +7,35 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
-        private string _licenseplte;
         /// <summary>
         /// Property that contains the Licensplate as a string
         /// </summary>
-        public string Licenseplate
-        {
-            get
-            {
-                return _licenseplte;
-            }
-            set
-            {
-                if (value.Length > 7)
-                {
-                    throw new ArgumentException("Licenseplate must be under 7 characters");
-                }
-                else
-                {
-                    _licenseplte = value;
-                }
+        public abstract string Licenseplate { get; set; }
 
-            }
-        }
+
+        /// <summary>
+        /// Propperty that uses a boolean to indicates if the vehicle used Brobiz too pay.
+        /// </summary>
+        public abstract bool Brobiz { get; set; }
 
         /// <summary>
         /// Property that contains the date the vehicle passed as DateTime
         /// </summary>
-        public DateTime Date { get; set; }
+        public abstract DateTime Date { get; set; }
 
         /// <summary>
-        /// A method that returns a fixed price
+        /// A method that returns a fixed price.
+        /// If the vehicle has brobizz, there will be subtracketd 10%
         /// </summary>
         /// <returns> The value in double</returns>
-        public virtual double Price()
-        {
-            return 0;
-        }
+        public abstract double Price();
+
         /// <summary>
         /// A method that returns the type of vechile
         /// </summary>
         /// <returns>Returns a string </returns>
-        public virtual string VehicleType()
-        {
-            return "Vehicle";
-        }
+        public abstract string VehicleType();
     }
 }
