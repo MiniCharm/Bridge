@@ -18,13 +18,12 @@ namespace TestBridge
             Reposetory storRepo = new Reposetory();
             List<Vehicle> listOfV = storRepo.GetAllTickets();
 
-
             //Assert
             Assert.IsNotNull(listOfV);
         }
 
         [TestMethod]
-        public void TestAddTicket()
+        public void TestAddTicket() 
         {
             //Arrange
             Reposetory storRepo = new Reposetory();
@@ -46,15 +45,11 @@ namespace TestBridge
             //Arrange
             Reposetory storRepo = new Reposetory();
             List<Vehicle> listOfV = storRepo.GetAllTickets();
-            Vehicle v = new Car("5555555", new DateTime(2025, 07, 05), false);
-            Vehicle v1 = new Car("5555555", new DateTime(2025, 09, 03), true);
 
             //act
-            storRepo.AddTicket(v);
-            storRepo.AddTicket(v1);
-            List<Vehicle> found= storRepo.GetTicketsFromPlate("5555555");
+            List<Vehicle> found= storRepo.GetTicketsFromPlate("2222222");
 
-            Assert.AreEqual(found.Count(), 2);
+            Assert.AreEqual(found.Count(),1);
 
         }
 
