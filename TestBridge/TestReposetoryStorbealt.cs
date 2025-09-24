@@ -17,14 +17,18 @@ namespace TestBridge
             //Arrange
             Reposetory storRepo = new Reposetory();
             List<Vehicle> listOfV = storRepo.GetAllTickets();
+            Vehicle v = new Car("1111111", new DateTime(2025, 07, 05), false);
 
+            //act
+            storRepo.AddTicket(v);
+            
 
             //Assert
             Assert.IsNotNull(listOfV);
         }
 
         [TestMethod]
-        public void TestAddTicket()
+        public void TestAddTicket() 
         {
             //Arrange
             Reposetory storRepo = new Reposetory();
