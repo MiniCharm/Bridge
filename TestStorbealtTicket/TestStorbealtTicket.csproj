@@ -13,11 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bridge\Bridge.csproj" />
-    <ProjectReference Include="..\StoreBealtTicketLibrary\StoreBealtTicketLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 

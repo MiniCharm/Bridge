@@ -5,13 +5,23 @@ namespace TestBridge
     [TestClass]
     public sealed class TestMC
     {
+        [DataTestMethod]
+        [DataRow("11111111111")]
+        [DataRow("77777777")]
         [TestMethod]
-        public void TestInvalidLisenceplateMc()
+        public void TestInvalidLisenceplateMc(string licensplate)
         {
             //Act
-            Action invalidLisenceplate = () => new MC("11111111111", DateTime.Now,false);
+            Action invalidLisenceplate = () => new MC(licensplate, DateTime.Now,false);
             //Arrange
             Assert.ThrowsException<ArgumentException>(invalidLisenceplate);
+        }
+
+        [TestMethod]
+        public void TestValidLisenceplateMc() 
+        { 
+
+            
         }
 
         [TestMethod]

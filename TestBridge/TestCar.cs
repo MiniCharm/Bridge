@@ -1,15 +1,20 @@
 ﻿using Bridge;
+using StoreBealtTicketLibrary;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TestBridge
 {
     [TestClass]
     public sealed class TestCar
     {
+        [DataTestMethod]
+        [DataRow("11111111111")]
+        [DataRow("77777777")]
         [TestMethod]
-        public void TestInvalidLisenceplateCar() 
+        public void TestInvalidLisenceplateCar(string licensplate) 
         {
             //Act
-            Action invalidLisenceplate = () => new Car("11111111111", DateTime.Now,false);
+            Action invalidLisenceplate = () => new Car(licensplate, DateTime.Now,false);
             //Arrange
             Assert.ThrowsException<ArgumentException>(invalidLisenceplate);
         }
@@ -52,8 +57,5 @@ namespace TestBridge
             //Assert
             Assert.AreEqual(result, "Car");
         }
-
-
-
     }
 }
