@@ -8,8 +8,8 @@ namespace TestBridge
     public sealed class TestCar
     {
         [DataTestMethod]
-        [DataRow("11111111111")]
-        [DataRow("77777777")]
+        [DataRow("333333333333")]
+        [DataRow("88888888")]
         [TestMethod]
         public void TestInvalidLisenceplateCar(string licensplate) 
         {
@@ -23,7 +23,7 @@ namespace TestBridge
         public void TestPriceCar()
         {
             //Arrange
-            Vehicle c = new Car("7777777", DateTime.Now,false);
+            Vehicle c = new Car("5555555", DateTime.Now,false);
 
             //Act
             double result = c.Price();
@@ -36,7 +36,7 @@ namespace TestBridge
         public void TestPriceCarWithBrobiz()
         {
             //Arrange
-            Vehicle c = new Car("8888888", DateTime.Now, true);
+            Vehicle c = new Car("6666666", DateTime.Now, true);
 
             //Act
             double result = c.PriceWithBrobisDiscount(c.Price());
@@ -49,7 +49,7 @@ namespace TestBridge
         public void TestVehicleTypeCar()
         {
             //Arrange
-            Vehicle c = new Car("7777777", DateTime.Now,false);
+            Vehicle c = new Car("1111111", DateTime.Now,false);
 
             //Act
             string result = c.VehicleType();

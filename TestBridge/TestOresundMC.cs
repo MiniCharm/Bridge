@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace TestBridge
 {
-    [ExcludeFromCodeCoverage]
         public sealed class TestOresundMC
         {
             [DataTestMethod]

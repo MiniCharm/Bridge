@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace TestBridge
 {
-    [ExcludeFromCodeCoverage]
     [TestClass]
     public sealed class TestOresundCar
     {
