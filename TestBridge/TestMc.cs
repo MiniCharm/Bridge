@@ -8,6 +8,7 @@ namespace TestBridge
         [DataTestMethod]
         [DataRow("11111111111")]
         [DataRow("77777777")]
+        [DataRow("862496357")]
         [TestMethod]
         public void TestInvalidLisenceplateMc(string licensplate)
         {

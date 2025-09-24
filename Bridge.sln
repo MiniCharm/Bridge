@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBridge", "TestBridge\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreBealtTicketLibrary", "StoreBealtTicketLibrary\StoreBealtTicketLibrary.csproj", "{A5983605-80F4-45E8-B5F2-D8486F567E66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundbronLibrary", "OresundbronLibrary\OresundbronLibrary.csproj", "{E16B4F30-3CDA-4902-8B60-4448B606CD11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A5983605-80F4-45E8-B5F2-D8486F567E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5983605-80F4-45E8-B5F2-D8486F567E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5983605-80F4-45E8-B5F2-D8486F567E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16B4F30-3CDA-4902-8B60-4448B606CD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16B4F30-3CDA-4902-8B60-4448B606CD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16B4F30-3CDA-4902-8B60-4448B606CD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16B4F30-3CDA-4902-8B60-4448B606CD11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
