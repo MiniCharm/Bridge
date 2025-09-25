@@ -18,6 +18,11 @@ namespace OresundbronLibrary
             return 235;
         }
 
+        /// <summary>
+        /// Method that returns the price with brobiz
+        /// </summary>
+        /// <param name="price">Den originale pris</param>
+        /// <returns>Returns the double 92</returns>
         public override double PriceWithBrobisDiscount(double price)
         {
             if (Brobiz == true) 
@@ -27,6 +32,10 @@ namespace OresundbronLibrary
             return price;
         }
 
+        /// <summary>
+        /// A method that returns the VehicleType
+        /// </summary>
+        /// <returns> Returns Type Orsund MC </returns>
         public override string VehicleType()
         {
             return "Oresund MC";

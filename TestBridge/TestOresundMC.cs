@@ -36,6 +36,7 @@ namespace TestBridge
                 Assert.AreEqual(result, 235);
             }
 
+
             [TestMethod]
             public void TestPriceMCWithBrobiz()
             {

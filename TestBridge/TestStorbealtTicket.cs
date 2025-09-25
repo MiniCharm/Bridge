@@ -22,7 +22,7 @@ namespace TestBridge
         {
             //Arrange
             StorBealtExtended car = new StorBealtExtended("7777777", new DateTime(år, måned, dag), true);
-
+            
             //Act
             double result = car.WeekendDiscount();
 
