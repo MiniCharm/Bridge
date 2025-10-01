@@ -11,6 +11,7 @@ namespace Bridge
         private string _licenseplte;
         /// <summary>
         /// Property that contains the Licensplate as a string
+        /// Validates if the length is under 7
         /// </summary>
         public override string Licenseplate
         {
@@ -52,12 +53,13 @@ namespace Bridge
         /// <summary>
         /// A method that returns a fixed price
         /// </summary>
-        /// <returns>the double 120</returns>
+        /// <returns>Returns the double 120</returns>
 
         public override double Price()
         {
             return 120;
         }
+
         /// <summary>
         /// A method that returns the type of vechile
         /// </summary>

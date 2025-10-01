@@ -11,6 +11,7 @@ namespace Bridge
         private string _licenseplte;
         /// <summary>
         /// Property that contains the Licensplate as a string
+        /// Validates if the length is under 7
         /// </summary>
         public override string Licenseplate
         {

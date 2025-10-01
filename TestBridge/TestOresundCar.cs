@@ -19,16 +19,28 @@ namespace TestBridge
         public void TestInvalidLisenceplateCar(string licensplate)
         {
             //Act
-            Action invalidLisenceplate = () => new OresundbronCar(licensplate, DateTime.Now, false);
+            Action invalidLisenceplate = () => new OresundbronCar(licensplate, new DateTime(2025, 10, 01), false);
             //Arrange
             Assert.ThrowsException<ArgumentException>(invalidLisenceplate);
+        }
+
+        [DataTestMethod]
+        [DataRow("7854964")]
+        [DataRow("865247")]
+        [TestMethod]
+        public void TestValidLisenceplateCar(string licensplate)
+        {
+            //Act
+            Vehicle car = new OresundbronCar(licensplate, new DateTime(2025, 10, 01), false);
+            //Arrange
+            Assert.AreEqual(licensplate, car.Licenseplate);
         }
 
         [TestMethod]
         public void TestPriceCar()
         {
             //Arrange
-            Vehicle c = new OresundbronCar("7777777", DateTime.Now, false);
+            Vehicle c = new OresundbronCar("7777777", new DateTime(2025, 10, 01), false);
 
             //Act
             double result = c.Price();
@@ -41,7 +53,7 @@ namespace TestBridge
         public void TestPriceCarWithBrobiz()
         {
             //Arrange
-            Vehicle c = new OresundbronCar("8888888", DateTime.Now, true);
+            Vehicle c = new OresundbronCar("8888888", new DateTime(2025, 10, 01), true);
 
             //Act
             double result = c.PriceWithBrobisDiscount(c.Price());
@@ -54,7 +66,7 @@ namespace TestBridge
         public void TestVehicleTypeCar()
         {
             //Arrange
-            Vehicle c = new OresundbronCar("7777777", DateTime.Now, false);
+            Vehicle c = new OresundbronCar("7777777", new DateTime(2025, 10, 01), false);
 
             //Act
             string result = c.VehicleType();

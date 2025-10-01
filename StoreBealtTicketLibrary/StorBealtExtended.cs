@@ -9,7 +9,10 @@ namespace StoreBealtTicketLibrary
 
         }
 
-
+        /// <summary>
+        /// Method that returns the price with a weekend discount, and afterwords brobiz discount, if brobiz is true
+        /// </summary>
+        /// <returns>Returns a double prize</returns>
         public double WeekendDiscount() 
         {
             double price = base.Price();

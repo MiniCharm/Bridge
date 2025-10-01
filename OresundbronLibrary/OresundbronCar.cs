@@ -8,19 +8,19 @@ namespace OresundbronLibrary
         {
         }
         /// <summary>
-        /// 
+        /// A method that returns a fixed price
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns the double 460</returns>
         public override double Price()
         {
             return 460;
         }
         
         /// <summary>
-        /// A method that returns the price 178 
+        /// A method that returns the price with brobiz biscount
         /// </summary>
-        /// <param name="price"></param>
-        /// <returns>A double</returns>
+        /// <param name="price">The base price in double</param>
+        /// <returns>The double 178e</returns>
         public override double PriceWithBrobisDiscount(double price)
         {
             if (Brobiz == true)

@@ -10,13 +10,27 @@ namespace TestBridge
         [DataTestMethod]
         [DataRow("333333333333")]
         [DataRow("88888888")]
+        [DataRow("789513498")]
         [TestMethod]
         public void TestInvalidLisenceplateCar(string licensplate) 
         {
             //Act
-            Action invalidLisenceplate = () => new Car(licensplate, DateTime.Now,false);
+            Action invalidLisenceplate = () => new Car(licensplate, new DateTime(2025, 10, 01), false);
             //Arrange
             Assert.ThrowsException<ArgumentException>(invalidLisenceplate);
+        }
+
+        [DataTestMethod]
+        [DataRow("759648")]
+        [DataRow("4862157")]
+        [DataRow("96587")]
+        [TestMethod]
+        public void TestvalidLisenceplateCar(string licensplate) 
+        {
+            //Act
+            Vehicle car = new Car(licensplate, new DateTime(2025, 10, 01), false);
+            //Assert
+            Assert.AreEqual(licensplate, car.Licenseplate);
         }
 
         [TestMethod]
@@ -36,7 +50,7 @@ namespace TestBridge
         public void TestPriceCarWithBrobiz()
         {
             //Arrange
-            Vehicle c = new Car("6666666", DateTime.Now, true);
+            Vehicle c = new Car("6666666", new DateTime(2025, 10, 01), true);
 
             //Act
             double result = c.PriceWithBrobisDiscount(c.Price());
@@ -49,7 +63,7 @@ namespace TestBridge
         public void TestVehicleTypeCar()
         {
             //Arrange
-            Vehicle c = new Car("1111111", DateTime.Now,false);
+            Vehicle c = new Car("1111111", new DateTime(2025, 10, 01), false);
 
             //Act
             string result = c.VehicleType();

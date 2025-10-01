@@ -13,15 +13,23 @@ namespace TestBridge
         public void TestInvalidLisenceplateMc(string licensplate)
         {
             //Act
-            Action invalidLisenceplate = () => new MC(licensplate, DateTime.Now,false);
-            //Arrange
+            Action invalidLisenceplate = () => new MC(licensplate, new DateTime(2025, 10, 1), false);
+            //Assert
             Assert.ThrowsException<ArgumentException>(invalidLisenceplate);
         }
 
+        [DataTestMethod]
+        [DataRow("1111")]
+        [DataRow("7652148")]
+        [DataRow("96584")]
         [TestMethod]
-        public void TestValidLisenceplateMc() 
-        { 
+        public void TestValidLisenceplateMc( string licensplate) 
+        {
+            //Act
+            Vehicle mc = new MC(licensplate, new DateTime(2025, 10, 1), false);
 
+            //Assert
+            Assert.AreEqual(licensplate, mc.Licenseplate);
             
         }
 
@@ -29,7 +37,7 @@ namespace TestBridge
         public void TestPriceMcWithBrobiz()
         {
             //Arrange
-            Vehicle mc = new MC("8888888", DateTime.Now, true);
+            Vehicle mc = new MC("8888888", new DateTime(2025, 10, 1), true);
 
             //Act
             double result = mc.PriceWithBrobisDiscount(mc.Price());
@@ -42,7 +50,7 @@ namespace TestBridge
         public void TestPriceMC()
         {
             //Arrange
-            Vehicle mc = new MC("6666666",DateTime.Now,false);
+            Vehicle mc = new MC("6666666", new DateTime(2025, 10, 1), false);
 
             //Act
             double result = mc.Price();
@@ -55,7 +63,7 @@ namespace TestBridge
         public void TestVehicleTypeMC()
         {
             //Arrange
-            Vehicle mc = new MC("6666666", DateTime.Now,false);
+            Vehicle mc = new MC("5864792", new DateTime(2025, 10, 1), false);
 
             //Act
             string result = mc.VehicleType();

@@ -13,15 +13,19 @@ namespace OresundbronLibrary
         {
         }
 
+        /// <summary>
+        /// A method that returns a fixed price
+        /// </summary>
+        /// <returns> Returns the double 235 </returns>
         public override double Price()
         {
             return 235;
         }
 
         /// <summary>
-        /// Method that returns the price with brobiz
+        /// Method that returns the price with brobiz discount
         /// </summary>
-        /// <param name="price">Den originale pris</param>
+        /// <param name="price">The base price</param>
         /// <returns>Returns the double 92</returns>
         public override double PriceWithBrobisDiscount(double price)
         {

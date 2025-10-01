@@ -9,6 +9,9 @@ namespace StoreBealtTicketLibrary
 {
     public class Reposetory
     {
+        /// <summary>
+        /// A static list, that contains all vehicles, that crossed the bridge
+        /// </summary>
         private static List<Vehicle> _vehicles = new List<Vehicle> 
         { 
                 new Car("2222222", new DateTime(2025, 07, 05), false), 
@@ -16,16 +19,16 @@ namespace StoreBealtTicketLibrary
         };
 
         /// <summary>
-        /// En Add metode, som tilføjer et Vehcle objekt til en statisk  liste
+        /// Method, that adds a vehicle to a static list
         /// </summary>
-        /// <param name="vehicle">Returnerer et vehicle objekt</param>
+        /// <param name="vehicle">Returns the vehicle object</param>
         public void AddTicket(Vehicle vehicle) 
         {
             _vehicles.Add(vehicle);
         }
 
         /// <summary>
-        /// En Get metode, som henter alle Vehcle der er i en statisk liste
+        /// Method, that gets all the vehicles from a static list
         /// </summary>
         /// <returns></returns>
         public List<Vehicle> GetAllTickets() 
@@ -34,10 +37,10 @@ namespace StoreBealtTicketLibrary
         }
 
         /// <summary>
-        /// Metode, som hender alle Vehcles med den pågældende licenseplate
+        /// Method, taht gets all vehicle with a specific licensplate
         /// </summary>
-        /// <param name="licenseplate">En Vehcle licensplate</param>
-        /// <returns>Returnere en liste Vehcles </returns>
+        /// <param name="licenseplate">A licensplate</param>
+        /// <returns>Returns a list</returns>
         public List<Vehicle> GetTicketsFromPlate(string licenseplate)
         {
             return _vehicles.Where(v => v.Licenseplate == licenseplate).ToList();
